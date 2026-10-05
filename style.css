@@ -23,7 +23,7 @@ nav a {
       Aðeins <a> sem er beint barn nav fær litinn. */
 
 nav > a {
-  color: #c2571a;
+  color: orange;
 }
 
 
@@ -57,7 +57,7 @@ h2 + p {
 /* 6. PSEUDO-CLASS :hover */
 
 nav a:hover {
-  color: #c2571a;
+  color: pink;
   text-decoration: underline;
 }
 
@@ -69,7 +69,7 @@ nav a:hover {
 }
 
 .listi li:nth-child(even) {
-  background: #eeeeee;
+  background-color: green;
 }
 
 
@@ -77,14 +77,14 @@ nav a:hover {
       Aðeins email-reiturinn */
 
 input[type="email"] {
-  border: 2px solid #c2571a;
+  border: 2px solid blue;
 }
 
 
 /* 9. ERFÐIR */
 
 aside {
-  color: #c2571a;
+  color: red;
   border: 1px solid #ccc;
 }
 
@@ -92,9 +92,13 @@ aside {
 /* =====================================================
    10. SPECIFICITY-GÁTA – EKKI breyta fyrr en við gerum það saman!
    ===================================================== */
-
+/* level 3, 0-0-1*/
 p          { color: red; }
+/* level 2 0-1-0*/
 .gata      { color: orange; }
+/* level 3 0-0-2*/
 footer p   { color: purple; }
+/* level 2 0-1-1 */
 p.gata     { color: blue; }
+/* level 1 1-0-0 TOP PRIORITY*/
 #gata      { color: green; }
