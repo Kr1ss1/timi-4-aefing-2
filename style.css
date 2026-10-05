@@ -3,9 +3,9 @@
    ===================================================== */
 
 body {
-  font-family: Arial, sans-serif;
-  color: #1b1f3b;
-  max-width: 800px;
+      font-family: Arial, sans-serif;
+      color: #1b1f3b;
+      max-width: 800px;
 }
 
 
@@ -14,62 +14,62 @@ body {
       og litur #1b1f3b. */
 
 nav a {
-  text-decoration: none;
-  color: #1b1f3b;
+      text-decoration: none;
+      color: #1b1f3b;
 }
 
 
 /* 2. BÖRN (>)
       Aðeins <a> sem er beint barn nav fær litinn. */
 
-nav > a {
-  color: orange;
+nav>a {
+      color: orange;
 }
 
 
 /* 3. AFKOMENDUR vs. BÖRN */
 
 article p {
-  line-height: 1.6;
+      line-height: 1.6;
 }
 
-article > p {
-  color: #555;
+article>p {
+      color: #555;
 }
 
 
 /* 4. .tilvitnun p verður skáletrað */
 
 .tilvitnun p {
-  font-style: italic;
+      font-style: italic;
 }
 
 
 /* 5. NÆSTA SYSTKINI (+)
       Fyrsta málsgreinin beint á eftir hverri h2 */
 
-h2 + p {
-  font-size: 20px;
-  font-weight: bold;
+h2+p {
+      font-size: 20px;
+      font-weight: bold;
 }
 
 
 /* 6. PSEUDO-CLASS :hover */
 
 nav a:hover {
-  color: pink;
-  text-decoration: underline;
+      color: pink;
+      text-decoration: underline;
 }
 
 
 /* 7. PSEUDO-CLASSES :first-child og :nth-child */
 
 .listi li:first-child {
-  font-weight: bold;
+      font-weight: bold;
 }
 
 .listi li:nth-child(even) {
-  background-color: green;
+      background-color: green;
 }
 
 
@@ -77,15 +77,15 @@ nav a:hover {
       Aðeins email-reiturinn */
 
 input[type="email"] {
-  border: 2px solid blue;
+      border: 2px solid blue;
 }
 
 
 /* 9. ERFÐIR */
 
 aside {
-  color: red;
-  border: 1px solid #ccc;
+      color: red;
+      border: 1px solid #ccc;
 }
 
 
@@ -93,12 +93,26 @@ aside {
    10. SPECIFICITY-GÁTA – EKKI breyta fyrr en við gerum það saman!
    ===================================================== */
 /* level 3, 0-0-1*/
-p          { color: red; }
+p {
+      color: red;
+}
+
 /* level 2 0-1-0*/
-.gata      { color: orange; }
+.gata {
+      color: orange;
+}
+
 /* level 3 0-0-2*/
-footer p   { color: purple; }
+footer p {
+      color: purple;
+}
+
 /* level 2 0-1-1 */
-p.gata     { color: blue; }
+p.gata {
+      color: blue;
+}
+
 /* level 1 1-0-0 TOP PRIORITY*/
-#gata      { color: green; }
+#gata {
+      color: green;
+}
